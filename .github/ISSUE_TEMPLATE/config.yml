@@ -1,0 +1,11 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Question
+    url: https://github.com/nicepkg/translate-helpers/discussions/new?category=Q-A
+    about: Ask a question or discuss about translate-helpers
+  - name: Ideas
+    url: https://github.com/nicepkg/translate-helpers/discussions/new?category=Ideas
+    about: Start a discussion to improve translate-helpers
+  - name: GitHub Sponsors
+    url: https://github.com/sponsors/nicepkg
+    about: Like this project? Please consider supporting the author.

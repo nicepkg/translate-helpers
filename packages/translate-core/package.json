@@ -1,0 +1,89 @@
+{
+  "name": "@nicepkg/translate-core",
+  "version": "0.1.0",
+  "description": "",
+  "keywords": [
+    "translate",
+    "nicepkg"
+  ],
+  "contributors": [
+    {
+      "name": "yangjinming",
+      "url": "https://github.com/2214962083"
+    }
+  ],
+  "funding": "https://github.com/sponsors/2214962083",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "build": "pnpm type-check &&unbuild",
+    "build:watch": "pnpm build -- --stub",
+    "clean": "rimraf ./dist/**/*",
+    "type-check": "tsc --noEmit"
+  },
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "typesVersions": {
+    "*": {
+      "*": [
+        "./dist/*",
+        "./*"
+      ]
+    }
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "require": "./dist/index.cjs",
+      "import": "./dist/index.mjs"
+    },
+    "./core": {
+      "types": "./dist/core.d.ts",
+      "require": "./dist/core.cjs",
+      "import": "./dist/core.mjs"
+    },
+    "./md": {
+      "types": "./dist/md.d.ts",
+      "require": "./dist/md.cjs",
+      "import": "./dist/md.mjs"
+    },
+    "./*": "./*"
+  },
+  "files": [
+    "dist"
+  ],
+  "sideEffects": false,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nicepkg/translate-helpers",
+    "directory": "packages/translate-core"
+  },
+  "bugs": {
+    "url": "https://github.com/nicepkg/translate-helpers/issues"
+  },
+  "homepage": "https://github.com/nicepkg/translate-helpers#readme",
+  "dependencies": {
+    "@vitalets/google-translate-api": "^9.0.0",
+    "deepl": "^1.0.13",
+    "http-proxy-agent": "^5.0.0",
+    "remark-gfm": "^3.0.1",
+    "remark-math": "^5.1.1",
+    "remark-parse": "^10.0.1",
+    "remark-stringify": "^10.0.2",
+    "unified": "^10.1.2",
+    "unist-util-visit": "^4.1.1"
+  },
+  "devDependencies": {
+    "@types/node": "*",
+    "@types/node-fetch": "^2.6.2",
+    "conventional-changelog-cli": "*",
+    "cross-env": "^7.0.3",
+    "esno": "*",
+    "mdast": "^3.0.0",
+    "node-fetch": "^2.6.7",
+    "rimraf": "^3.0.2",
+    "typescript": "*",
+    "unbuild": "*"
+  }
+}
